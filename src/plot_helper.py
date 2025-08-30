@@ -30,7 +30,7 @@ def plot_scatter(df_pos, df_neg, independent_variables,save_path="./", file_name
         axs.scatter(x_neg, neg, label='0 (Normal)', alpha=0.7)
         axs.set_title(var)
     axes[0,1].legend()
-    plt.savefig(save_path+file_name)
+    plt.savefig(save_path+"/"+file_name)
     plt.show()
 
 
@@ -43,6 +43,6 @@ def plot_boxplot(df,independent_variables,save_path="./", file_name="boxplot.png
             axs = axes[1,i-3]
         sns.boxplot(data=df, x="class", y=var, ax=axs)
     axes[0,1].legend()
-    plt.savefig(save_path+file_name)
+    plt.savefig(save_path+"/"+file_name)
     plt.show()
 
